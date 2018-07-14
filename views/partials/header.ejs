@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Sports</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.2/semantic.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="ui fixed menu">
+            <div class="ui container">
+                <div class="ui item" style="font-size:20px">
+                    <strong><i class="football ball icon"></i>Sports</strong>
+                </div>
+                <div class="right menu" style="font-size:15px">
+                    <div class="ui item">
+                        <strong><a href="/dashboard" style="color:#490707"><%= currentUser.username %></a></strong>
+                    </div>
+                    <div class="ui item" style="font-size:15px">
+                        <strong><a href="/logout" style="color:#490707">Logout</a></strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top:50px;margin-left:400px;width:400px">
+            <% if(error && error.length>0){ %>
+            <div class="ui warning message">
+          <div class="header">
+                <%= error %>
+          </div>
+        </div>
+        <% } %>
+        <% if(success && success.length > 0) { %>
+        <div class="ui success message">
+          <div class="header">
+              <%= success%>
+            </div> 
+            </div>
+            <% } %>
+        </div>

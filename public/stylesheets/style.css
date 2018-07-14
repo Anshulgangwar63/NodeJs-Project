@@ -1,0 +1,190 @@
+.header
+{
+    background-image:url(../images/basketball-wallpapers-jordan122-2048x1280.jpg);
+    height:100vh;
+    background-position:center;
+    background-size:cover;
+    color:white;
+}
+.nav
+{
+    font-size:1.2em;
+    padding:10px 20px;
+    border-radius:3px;
+    background:none;
+    color:white;
+    border:1px solid white;
+    transition:.5s;
+    font-weight:bold;
+}
+
+.nav:hover
+{
+    background-color:white;
+    color:black;
+}
+
+.logo
+{
+    font-size:1.7em;
+}
+.logo a
+{
+    font-family: 'Pacifico', cursive;
+    text-decoration:none;
+    color:white;
+}
+
+.home-banner
+{
+    margin-top:30vh;
+    text-align:center;
+}
+
+.home-banner p
+{
+    font-family: 'IBM Plex Serif', serif;
+    font-weight:500;
+    line-height:1;
+    font-size:3em;
+    width:auto;
+}
+.home-banner span
+{
+    font-size:2em;
+    font-weight:600;
+}
+
+section
+{
+    padding:80px;
+    
+}
+
+h2
+{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:2.2em;
+}
+h2:after
+{
+    display: block;
+    height: 4px;
+    background-color: #db2828;
+    content: " ";
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.column
+{
+    text-align:center;
+}
+
+.column i
+{
+    font-size:1.9em;    
+}
+.column h3
+{
+    font-weight:900;
+    font-size:1.7em;    
+}
+.column p
+{
+    font-size:1.1em;    
+}
+
+/* Form Style */
+
+.contact-form
+{
+    width: 60%;
+    margin: 0 auto;
+}
+input[type=text],
+input[type=email],
+select,textarea
+{
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea
+{
+    height: 100px;
+}
+input[type=checkbox]
+{
+    margin: 10px 5px 10px 0;
+}
+
+
+.span-3-of-3 {
+	width: 100%; 
+}
+
+.span-2-of-3 {
+	width: 66.13%; 
+}
+
+.span-1-of-3 {
+	width: 32.26%; 
+}
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; }
+
+
+input[type=submit]
+{
+    color: black;
+}
+
+
+/* clear floats */
+.feature-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.dev
+{
+    text-align:center;
+}
+
+.dev-image img
+{
+    border-radius:50%;
+}
+
+.dev-content
+{
+    margin-top:10px;
+}
+
+.dev-header
+{
+    font-weight:bold;
+}
+
+.dev-content span
+{
+    display:block;
+    font-size:15px;
+    color:#c5cdc1;
+}
+footer
+{
+    background-color:#c5cdc1;
+    text-align:center;
+}

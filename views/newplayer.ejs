@@ -1,0 +1,48 @@
+<% include partials/header %>
+<%include partials/sidebar %>
+    <div class="twelve wide column" style="margin-top:30px">
+          <h2 class="ui header">
+                <img  src="<%= team.image %>" height="200px" width="200px">
+                <div class="content">
+                <%= team.name %>
+                </div>
+            </h2>  
+            <h3>Add Player Details:- </h3>
+            <form action="/dashboard/myteams/<%= team._id%>" method="POST" class="ui form" style="margin-right:30px">
+                <h4 class="ui dividing header">Personal Information</h4>
+                <div class="field">
+                    <label>Name:</label>
+                    <input type="text" placeholder="name" name="name" required >   
+                </div>
+                <div class="field">
+                    <label>Father Name:</label>
+                    <input type="text" placeholder="father name" name="fatherName" required >    
+                </div>
+                <div class="field">
+                    <label>Date Of Birth</label>
+                    <input type="text" placeholder="dd/mm/yyyy" name="dateOfBirth" required>
+                </div>
+                <div class="field">
+                    <label>Previous Team</label>
+                    <input type="text" name="preTeam" required >    
+                </div>
+                <h4 class="ui dividing header">Contact Information:- </h4>
+                <div class="field">
+                    <label>Address:</label>
+                    <input type = "text" placeholder = "address" name="address" required >
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label>Mobile no.:</label>
+                        <input type = "number" placeholder = "eg.9087654432" name="mobileNo" required >
+                    </div>
+                    <div class="field">
+                        <label>Email</label>
+                        <input type = "email" placeholder = "email" name="email" required >  
+                    </div>
+                </div>
+                <div class="field">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+<% include partials/footer %>

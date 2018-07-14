@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Sports</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.2/semantic.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="ui menu">
+            <div class="ui container">
+                <div class="header item" style="font-size:20px">
+                    <i class="football ball icon"></i>Sports
+                 </div>
+                <div class="right menu" style="font-size:15px">
+                    <a class="item" href='/'>
+                            Home
+                          </a>
+                        <a class="item" href='/about'>
+                            About Us
+                          </a>
+                        <a class="item" href="/signup">
+                            Signup
+                         </a>      
+                 </div>
+            </div>
+        </div>
+        <div class="ui container">
+            <% if(error && error.length>0){ %>
+            <div class="ui warning message">
+          <div class="header">
+                <%= error %>
+          </div>
+        </div>
+        <% } %>
+        <% if(success && success.length > 0) { %>
+        <div class="ui success message">
+          <div class="header">
+              <%= success%>
+            </div> 
+            </div>
+            <% } %>
+        </div>
+        <div class="ui main text container segment" style="margin-top:50px;margin-right:100px;width:500px">
+                <h1 class="ui huge header" style="">Log-in to your account</h1>
+                <form class="ui large form" action="/login" method="POST" >
+                      <div class="ui stacked segment">
+                        <div class="field">
+                          <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" placeholder="username" name="username" required>
+                          </div>
+                        </div>
+                        <div class="field">
+                          <div class="ui left icon input">
+                            <i class="lock icon"></i>
+                            <input type="password" placeholder="password" name="password" required>
+                          </div>
+                        </div>
+                        <button class="ui fluid large teal submit button" type="submit">Login</button>
+                      </div>
+                </form>
+                 <div class="ui message">
+                  New to us? <a href="/signup">Sign Up</a>
+                </div>
+        </div>
+        <srcipt src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css"></srcipt>
+    </body>
+</html>

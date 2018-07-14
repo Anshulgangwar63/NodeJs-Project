@@ -1,0 +1,37 @@
+<% include partials/header %>
+<%include partials/sidebar %>
+        <div class="twelve wide column" style="margin-top:40px">
+          <h2 class="ui header">
+                <img  src="<%= team.image %>" height="200px" width="200px">
+                <div class="content">
+                <%= team.name %>
+                </div>
+            </h2>    
+            <hr style="margin-right:40px">
+            <h3>Team Players</h3>
+            <a href="/dashboard/myteams/<%= team._id %>/newplayer"><button class="ui inverted primary button">Add New Player</button></a>
+            <div class="team" style="margin-top:30px;margin-right:40px">
+                <table class="ui single line table">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Registration Date</th>
+                        <th>E-mail address</th>
+                        <th>Details</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% player.forEach(function(player){ %>
+                      <tr>
+                        <td><%= player.name%></td>
+                        <td><%= player.date.toDateString() %></td>
+                        <td><%= player.email%></td>
+                        <td><a href="/dashboard/myteams/<%= team._id %>/<%= player._id %>"><div class="ui button">View</div></a></td>
+                      </tr>
+                      <% }) %>
+                       </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<% include partials/footer %>

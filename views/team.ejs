@@ -1,0 +1,29 @@
+<% include partials/header %>
+<%include partials/sidebar %>
+        <div class="twelve wide column" style="margin-top:30px">
+          <h2 class="ui header" style="color:#490707">
+                <div class="content">
+                <i class="users icon" style="color:#ac1010"></i>My Teams:-
+                </div>
+            </h2>    
+            <hr style="margin-right:300px">
+            <div class="team" style="margin-top:50px;margin-right:300px">
+                 <div class="ui middle aligned divided list">
+                    <% team.forEach(function(team){ %>
+                    <div class="item">
+                      <div class="right floated content">
+                        <a href="/dashboard/myteams/<%= team._id %>"><button class="ui green button">View Details</button></a>
+                      </div>
+                      <img class="ui avatar image" src="<%= team.image %>">
+                      <div class="content">
+                        <div class="header">
+                          <h3><%= team.name %></h3>
+                          </div>
+                      </div>
+                    </div>
+                    <% }) %>
+                </div>
+                </div>
+            </div>
+        </div>
+<% include partials/footer %>

@@ -1,0 +1,83 @@
+<% include partials/header %>
+<%include partials/sidebar %>
+    <div class="twelve wide column" style="margin-top:30px">
+          <h2 class="ui header">
+                <img  src="<%= team.image %>" height="200px" width="200px">
+                <div class="content">
+                <%= team.name %>
+                </div>
+            </h2>
+            <hr>
+            <h2>Player Details:-</h2>
+            <a href="/dashboard/myteams/<%=team._id%>/<%= player._id %>/edit"><div class="ui button">Edit Details</div></a>
+            <div class="right floated content" style="float:left">
+                <form method="POST" action="/dashboard/myteams/<%= team._id%>/<%= player._id %>?_method=DELETE">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="submit" class="ui button" value="delete">
+            </form>
+            </div>    
+            <h3 class="ui dividing header" style="line-height:2">Personal Information</h3>
+            <div class="ui grid">
+                <div class="row">
+                    <div class="four wide column">
+                        <h4>Name:</h4>
+                    </div>
+                    <div class="four wide column">
+                        <h4> <%= player.name%></h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="four wide column">
+                        <h4>Father Name: </h4>
+                    </div>
+                    <div class="four wide column">
+                        <h4> <%= player.fatherName%></h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="four wide column">
+                        <h4>Date Of Birth: </h4>
+                    </div>
+                    <div class="four wide column">
+                        <h4><%= player.dateOfBirth %></h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="four wide column">
+                        <h4>Previous Team: </h4>
+                    </div>
+                    <div class="four wide column">
+                        <h4> <%= player.preTeam %></h4>
+                    </div>
+                </div>
+            </div>
+                <h3 class="ui dividing header"  style="line-height:2">Contact Information:- </h3>
+                <div class="ui grid">
+                    <div class="row">
+                        <div class="four wide column">
+                            <h4>Address:</h4>
+                        </div>
+                        <div class="four wide column">
+                            <h4><%= player.address %></h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="four wide column">
+                            <h4>Mobile no.:</h4>
+                        </div>
+                        <div class="four wide column">
+                            <h4><%= player.mobileNo%></h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="four wide column">
+                            <h4>Email:</h4>
+                        </div>
+                        <div class="four wide column">
+                            <h4><%= player.email %></h4>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+<% include partials/footer %>

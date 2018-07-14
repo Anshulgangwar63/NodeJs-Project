@@ -1,0 +1,39 @@
+<% include partials/header %>
+<%include partials/sidebar %>
+    <div class="twelve wide column">
+      <h2 style="margin-top:30px;margin-bottom:10px;color:#490707"><i class="images icon" style="color:#ac1010"></i>Memories:- </h2>
+      <a href="/dashboard/gallery/newmemory"><button class="ui red basic button">Add New Memory</button></a>
+      <hr style="margin-right:150px">
+        <div class="ui three column grid" style="margin-top:20px;margin-right:5px;">
+          <div class="row">
+              <div class="ui link cards">
+                  <%  memory.forEach(function(memory){ %>
+                  <div class="card">
+                    <div class="image">
+                      <img src="<%= memory.image %>">
+                    </div>
+                    <div class="content">
+                      <div class="header"><%= memory.title %></div>
+                      <div class="description">
+                        <%= memory.description %>
+                      </div>
+                    </div>
+                    <div class="extra content">
+                        <span class="right floated">
+                          <form action="/dashboard/gallery/<%= memory._id%>?_method=DELETE" method="POST">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" style="border:0;background:none;"><i class="red trash alternate icon"></i></button>
+                          </form>
+                        </span>
+                        <span>
+                          <%= memory.date.toDateString() %>
+                        </span>
+                      </div>
+                    </div>
+                    <% }) %>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+<% include partials/footer %>

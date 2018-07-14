@@ -1,0 +1,24 @@
+<% include partials/header %>
+<%include partials/sidebar %>
+    <div class="twelve wide column">
+        <div class="ui main text container segment" style="margin-top:50px;margin-right:100px">
+                <h1 class="ui huge header">New Memory</h1>
+                <form method="POST" action="/dashboard/gallery" class="ui form">
+                    <div class="field">
+                        <label>Image Url</label>
+                        <input type="text" name="image" placeholder="image url">
+                      </div>
+                      <div class="field">
+                        <label>Title</label>
+                        <input type="text" name="title" placeholder="title">
+                      </div>
+                       <div class="field">
+                        <label>Blog Post</label>
+                        <textarea name="description"></textarea>
+                      </div>
+                      <button class="ui inverted primary button" type="submit">Submit</button>
+                </form>
+        </div>
+    </div>
+</div>
+    <% include partials/footer %>

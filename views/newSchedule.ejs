@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Sports</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.2/semantic.min.css" rel="stylesheet">
+        <link href="stylesheets/schedule.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="ui fixed menu">
+            <div class="ui container">
+                <div class="ui item" style="font-size:20px">
+                    <strong><i class="football ball icon"></i>Sports</strong>
+                </div>
+                <div class="right menu" style="font-size:15px">
+                    <div class="ui item">
+                        <strong><a href="/dashboard"><%= currentUser.username %></a></strong>
+                    </div>
+                    <div class="ui item" style="font-size:15px">
+                        <strong><a href="/logout">Logout</a></strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+<%include partials/sidebar %>
+    <div class="twelve wide column">
+        <div class="ui main text container segment" style="margin-top:50px;margin-right:100px">
+                <h1 class="ui huge header">New Schedule</h1>
+                <form method="POST" action="/dashboard/schedule" class="ui form">
+                    <div class="field">
+                        <label>Team Name: </label>
+                        <input type="text" name="teamname" placeholder="team name">
+                      </div>
+                      <div class="field">
+                        <label>Date:</label>
+                            <input name="scheduleDate" type="date">
+                      </div>
+                       <div class="field">
+                        <label>Time:</label>
+                        <input type="text" name="time" placeholder="enter time in 24 hours eg: 19:00">
+                      </div>
+                      <button class="ui inverted primary button" type="submit">Submit</button>
+                </form>
+        </div>
+    </div>
+</div>
+ <srcipt src="javascript/script.js"></srcipt>
+    </body>
+</html>

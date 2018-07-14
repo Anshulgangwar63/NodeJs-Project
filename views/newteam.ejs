@@ -1,0 +1,20 @@
+<% include partials/header %>
+<%include partials/sidebar %>
+    <div class="twelve wide column">
+        <div class="ui main text container segment" style="margin-top:50px;margin-right:100px">
+                <h1 class="ui huge header">New Team</h1>
+                <form method="POST" action="/dashboard/newteam" class="ui form">
+                    <div class="field">
+                        <label>Logo Image Url</label>
+                        <input type="text" name="logo" placeholder="image url">
+                      </div>
+                      <div class="field">
+                        <label>Team Name</label>
+                        <input type="text" name="team" placeholder="team name">
+                      </div>
+                      <button class="ui inverted primary button" type="submit">Submit</button>
+                </form>
+        </div>
+    </div>
+</div>
+    <% include partials/footer %>
