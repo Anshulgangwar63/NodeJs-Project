@@ -4,7 +4,7 @@
   "description": "A sports league management System",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "author": "Anshul Gangwar",
   "license": "ISC",
