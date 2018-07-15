@@ -12,7 +12,7 @@ var Memory              = require("./models/memory");
 var Team                = require("./models/team");
 var Schedule            = require("./models/schedule");
 
-mongoose.connect("mongodb://anshul:anshul@ds235401.mlab.com:35401/sports-project");
+mongoose.connect("mongodb://anshul:anshul123@ds137611.mlab.com:37611/sports-project");
 app.set("view engine","ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
