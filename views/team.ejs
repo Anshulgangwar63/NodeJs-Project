@@ -1,12 +1,10 @@
 <% include partials/header %>
 <%include partials/sidebar %>
-        <div class="twelve wide column" style="margin-top:30px">
-          <h2 class="ui header" style="color:#490707">
-                <div class="content">
-                <i class="users icon" style="color:#ac1010"></i>My Teams:-
-                </div>
-            </h2>    
-            <hr style="margin-right:300px">
+        <div class="twelve wide column" style="margin-top:30px"> 
+                 <h2 style="margin-top:30px;margin-bottom:10px;color:#490707"><i class="user icon" style="color:#ac1010"></i>Teams:- </h2>
+                 <a href="/dashboard/newteam"><button class="ui red basic button">Add New Team</button></a>
+ 
+            <hr style="margin-right:300px"> 
             <div class="team" style="margin-top:50px;margin-right:300px">
                  <div class="ui middle aligned divided list">
                     <% team.forEach(function(team){ %>
