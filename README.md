@@ -4,7 +4,7 @@ Built Completely on nodeJS and its frameworks.You can add players details and de
 
 ## Technologies Used:-
 
-* nodeJS
+* NodeJS
 * EJS
 * HTML
 * CSS
@@ -14,5 +14,5 @@ Built Completely on nodeJS and its frameworks.You can add players details and de
 ## Framework:-
 * Express
 
+[See the live version on Heroku](https://sports90588.herokuapp.com)
 
-[See the live version here](https://sports90588.herokuapp.com)
