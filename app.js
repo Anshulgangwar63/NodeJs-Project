@@ -24,7 +24,7 @@ app.use(require("express-session")({
     resave:false,
     saveUninitialized:false
 }));
-// ------- Passport configuration ---------//
+// ------- Passport configuration -------//
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -41,7 +41,7 @@ app.use(function(req,res,next){
 
 
 
-//------- Home route----------//
+//------- Home route--------//
 app.get("/",function(req,res){
     res.render("index");
 });
@@ -74,7 +74,7 @@ app.post("/signup",function(req,res){
    });
 });
 
-// -----------login routes----------------------//
+// -----------login routes---------------------//
 
 app.get("/login",function(req,res){
    res.render("login"); 
