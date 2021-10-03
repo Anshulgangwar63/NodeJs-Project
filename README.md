@@ -3,7 +3,7 @@
 Built Completely on nodeJS and its frameworks.You can add players details and delete existing players, add photos of the game in the gallery and you can schedule tranining sessions.
 
 ## Technologies Used:-
-*
+
 * NodeJS
 * EJS
 * HTML
